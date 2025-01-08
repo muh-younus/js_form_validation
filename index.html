@@ -22,8 +22,8 @@
             <div class="input-group">
 
                 <label>Name</label>
-                <input type="text" style="margin-left: 60px;" placeholder="Enter Your Name" required>
-                <span class="name-error">Name is require!</span>
+                <input type="text" style="margin-left: 60px;" placeholder="Enter Your Name" required id="name" onkeyup="validateName()">
+                <span id="name-error"></span>
 
             </div>
 
@@ -31,29 +31,36 @@
 
                 <label>Phone No.</label>
                 <input type="tel" style="margin-left: 30px;" placeholder="123 456 789" required>
-                <span class="phone-error">Phone is require!</span>
+                <span class="phone-error"></span>
 
             </div>
 
             <div class="input-group">
 
                 <label>Email Id</label>
-                <input type="email" style="margin-left: 40px;" placeholder="Email">
-                <span class="email-require">Email is require!</span>
+                <input type="email" style="margin-left: 40px;" placeholder="Email" ">
+                <span class="email-error"></span>
             </div>
 
             <div class="input-group">
 
                 <label>Your Message</label>
                 <textarea rows="5" style="margin-left: 15px;" placeholder="Enter Your Message"></textarea>
-                <span class="msg-error">Message is require!</span>
+                <span class="msg-error"></span>
             </div>
 
-            <button class="btn">Submit</button>
-            <span class="button-error">Please fix error</span>
+            <div class="input-group">
+
+                <button class="btn">Submit</button>
+                <span class="button-error"></span>
+
+            </div>
 
         </form>
     </div>
+
+
+    <script src="script.js"></script>
 
 </body>
 
