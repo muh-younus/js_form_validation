@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FORM-VALIDATION-JAVASCRIPT</title>
 
+    <!-- FONT-AWESOME-LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- CSS-LINK -->
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -19,30 +22,35 @@
             <div class="input-group">
 
                 <label>Name</label>
-                <input type="text" placeholder="Enter Your Name" required>
+                <input type="text" style="margin-left: 60px;" placeholder="Enter Your Name" required>
+                <span class="name-error">Name is require!</span>
 
             </div>
 
             <div class="input-group">
 
                 <label>Phone No.</label>
-                <input type="tel" placeholder="123 456 789" required>
+                <input type="tel" style="margin-left: 30px;" placeholder="123 456 789" required>
+                <span class="phone-error">Phone is require!</span>
 
             </div>
 
             <div class="input-group">
 
                 <label>Email Id</label>
-                <input type="email" placeholder="Email">
+                <input type="email" style="margin-left: 40px;" placeholder="Email">
+                <span class="email-require">Email is require!</span>
             </div>
 
             <div class="input-group">
 
                 <label>Your Message</label>
-                <textarea rows="5" placeholder="Enter Your Message"></textarea>
+                <textarea rows="5" style="margin-left: 15px;" placeholder="Enter Your Message"></textarea>
+                <span class="msg-error">Message is require!</span>
             </div>
 
-            <button>Submit</button>
+            <button class="btn">Submit</button>
+            <span class="button-error">Please fix error</span>
 
         </form>
     </div>

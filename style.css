@@ -13,14 +13,84 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+   
 
 }
 
 .container{
 
     background-color: rgba(0, 0, 0, 0.8);
-    width: 55%;
-    height: 40%;
-    border: 5px solid black;
+    width: 30%;
+    height: 85%;
+    border-radius: 5px;
+    padding: 40px 25px;
+}
+
+form{
+
+    position: relative;
+    align-items: center;
+}
+
+.input-group{
+
+    margin-bottom: 30px;
+}
+
+form input{
+
+    background-color: transparent;
+    border-right: none;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.input-group textarea{
+
+    background-color: transparent;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline: none;
+    border-bottom: 2.5px solid gray;
+    color: #fff;
+}
+
+.input-group label{
+
+    flex-basis: 28%;
+    color: #fff;
+}
+
+.input-group input{
+
+    flex-basis: 68%;
+    outline: none;
+    color: #fff;
+}
+
+form .btn{
+
+   margin: 20px auto 10px;
+   display: block;
+   padding: 10px 25px;
+   font-weight: 500;
+   background-color: gray;
+   color: white;
+   border: none;
+   outline: none;
+   border-radius: 5px;
+}
+.input-group{
+
+    position: relative;
+}
+
+.input-group span{
+
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    color: red;
+    font-size: 14px;
 }
