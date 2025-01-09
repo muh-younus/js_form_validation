@@ -45,14 +45,14 @@
             <div class="input-group">
 
                 <label>Your Message</label>
-                <textarea rows="5" style="margin-left: 15px;" placeholder="Enter Your Message"></textarea>
-                <span class="msg-error"></span>
+                <textarea rows="5" style="margin-left: 15px;" placeholder="Enter Your Message" id="msge" onkeyup="validateMsge()"></textarea>
+                <span id="msg-error"></span>
             </div>
 
             <div class="input-group">
 
-                <button class="btn">Submit</button>
-                <span class="button-error"></span>
+                <button class="btn" onclick="return validateForm()">Submit</button>
+                <span id="button-error"></span>
 
             </div>
 

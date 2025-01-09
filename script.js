@@ -44,16 +44,18 @@ function validatePhone(){
         return false;
     }
 
-    if(phone.length !== 9){
+    if(phone.length == 9){
 
-        errorPhone.innerHTML = "<i class='fa-solid fa-circle-check'></i>"
+        errorPhone.innerHTML =  "<i class='fa-solid fa-circle-check'></i>";
+        return true;
     }
 
     if(!phone.match(/^[0-9]{10}$/)){
 
         errorPhone.innerHTML = "write full name";
     }
-    errorName.innerHTML = "<i class='fa-solid fa-circle-check'></i>";
+    
+   
 }
 
 // EMAIL-VALIDATION
@@ -66,6 +68,7 @@ function validateEmail(){
     if(email.length == 0){
 
         errorEmail.innerHTML = "Email required!";
+        return false;
         
     }
 
@@ -76,7 +79,43 @@ function validateEmail(){
 
     if (!email.match(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/)) {
         errorEmail.innerHTML = "Enter valid email";
+        return false;
     }
 
     errorEmail.innerHTML = "<i class='fa-solid fa-circle-check'></i>";
+    return true;
+}
+
+
+//VALIDATE-MESSAGE
+
+function validateMsge(){
+
+    let msge = document.getElementById("msge").value;
+    let required = 30;
+    let left = required - msge.length;
+    if(left > 0 ){
+
+        errorMsg.innerHTML = left + "character enter more!"
+        return false;
+    }
+    if( msge.length > required){
+
+        errorMsg.innerHTML = "length exceeded";
+        return false;
+    }
+    errorMsg.innerHTML = " <i class='fa-solid fa-circle-check'></i>";
+    return true;
+}
+
+function validateForm(){
+
+    if(!validateName() || !validateEmail() || !validateMsge() || !validatePhone()){
+        submitError.style.display = 'block';
+        submitError.innerHTML = 'Fixed the error';
+        setTimeout(function(){
+            submitError.style.display = 'none';
+        },3000)
+        return false;
+    }
 }
