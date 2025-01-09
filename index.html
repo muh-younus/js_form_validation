@@ -7,7 +7,7 @@
     <title>FORM-VALIDATION-JAVASCRIPT</title>
 
     <!-- FONT-AWESOME-LINK -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- CSS-LINK -->
     <link rel="stylesheet" href="./style.css">
@@ -30,16 +30,16 @@
             <div class="input-group">
 
                 <label>Phone No.</label>
-                <input type="tel" style="margin-left: 30px;" placeholder="123 456 789" required>
-                <span class="phone-error"></span>
+                <input type="tel" style="margin-left: 30px;" placeholder="123 456 789" required id="phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
 
             </div>
 
             <div class="input-group">
 
                 <label>Email Id</label>
-                <input type="email" style="margin-left: 40px;" placeholder="Email" ">
-                <span class="email-error"></span>
+                <input type="email" style="margin-left: 40px;" placeholder="Email" id="email" onkeyup="validateEmail()" >
+                <span id="email-error"></span>
             </div>
 
             <div class="input-group">
